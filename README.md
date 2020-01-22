@@ -1,6 +1,8 @@
 # VueNotes
 A Simple Note Webapp made with Vue.js and Routing.
 
+This app uses local storage, notes get cleared when moving to a new page.
+
 Apache 2.0 License
 
 ## Project setup
