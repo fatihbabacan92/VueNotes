@@ -1,4 +1,7 @@
-# vuenotes
+# VueNotes
+A Simple Note Webapp made with Vue.js and Routing.
+
+Apache 2.0 License
 
 ## Project setup
 ```
