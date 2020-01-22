@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary shadow-lg">
       <a class="navbar-brand" href="#">VueNotes</a>
       <button
         class="navbar-toggler"
@@ -33,7 +33,7 @@
         </ul>
       </div>
     </nav>
-    <router-view/>
+    <router-view class="route-container"/>
   </div>
 </template>
 
@@ -44,5 +44,8 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
+}
+.route-container {
+  margin-top: 5vh;
 }
 </style>

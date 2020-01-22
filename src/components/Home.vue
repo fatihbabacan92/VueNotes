@@ -1,8 +1,8 @@
 <template>
   <div class="app">
     <img alt="Vue logo" src="/assets/logo.png" />
-    <HelloWorld msg="Welcome to VueNotes" />
-    <button type="button" class="btn btn-primary">Go to Notes</button>
+    <h1>Welcome to VueNotes</h1>
+    <button type="button" class="btn btn-primary mt-5 shadow-lg">Go to Notes</button>
   </div>
 </template>
 
@@ -17,5 +17,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
-
+.mt-5 {
+  margin-top: 5vh;
+}
 </style>
