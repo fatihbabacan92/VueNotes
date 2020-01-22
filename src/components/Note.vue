@@ -8,7 +8,7 @@
       <button @click="addNote">Save Note</button>
     </div>
     <div>
-      <NoteItem v-for="n in notes" v-bind:note="n" v-bind:key="n.title" />
+      <NoteItem v-for="n in notes" v-bind:note="n" v-bind:key="n.id" />
     </div>
   </div>
 </template>
@@ -39,7 +39,7 @@ export default {
             return
         }
         this.notes.push(this.newNote)
-        this.newNote = ''
+        this.newNote = []
         this.saveNotes()
     },
     saveNotes() {
