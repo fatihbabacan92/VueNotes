@@ -32,7 +32,7 @@ export default {
   },
   mounted() {
     if (localStorage.getItem("notes")) {
-      this.notes = JSON.parse(localStorage.getItem("notes"))
+      localStorage.clear()
     }
   },
   methods: {
