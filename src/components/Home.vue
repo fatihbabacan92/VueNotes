@@ -1,6 +1,6 @@
 <template>
   <div class="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
+    <img alt="Vue logo" src="/assets/logo.png" />
     <HelloWorld msg="Welcome to VueNotes" />
     <button type="button" class="btn btn-primary">Go to Notes</button>
   </div>
