@@ -1,6 +1,6 @@
 <template>
-  <div>
-    <div class="card border-secondary mb-3" style="max-width: 20rem;">
+  <div class="d-inline float-left m-2">
+    <div class="card border-secondary mb-3 note">
       <div class="card-header">{{note.title}}</div>
       <div class="card-body">
         <p class="card-text">{{note.text}}</p>
@@ -20,4 +20,7 @@ export default {
 </script>
 
 <style>
+.note {
+  min-width: 20rem;
+}
 </style>
