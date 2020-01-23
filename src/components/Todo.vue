@@ -1,14 +1,15 @@
 <template>
   <div class="todo-card mx-auto shadow-lg">
-    <input v-model="newTodo.title" type="text" placeholder="Write down your todo..." class="form-control m-2 w-50" />
+    <input v-model="newTodo.text" type="text" placeholder="Write down your todo..." class="form-control m-2 w-50" />
     <button @click="addTodo" class="btn btn-primary shadow-lg m-2">Add Todo</button>
-    <TodoItem @deleteTodo="deleteTodo(todo)" v-for="t in todos" v-bind:note="t" v-bind:key="t.id"/>
+    <TodoItem @deleteTodo="deleteTodo(todo)" v-for="t in todos" v-bind:todo="t" v-bind:key="t.id"/>
     <button class="btn btn-warning btn-sm d-block mx-auto">Clear All</button>
   </div>
 </template>
 
 <script>
 import TodoItem from "@/components/TodoItem.vue"
+
 export default {
     name: 'Todo',
     components: {
