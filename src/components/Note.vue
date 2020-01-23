@@ -38,7 +38,7 @@ export default {
   methods: {
     addNote() {
       //Check if not null
-      if (!this.newNote) {
+      if (!this.newNote.title && !this.newNote.text) {
         return;
       }
       this.newNote.id = this.notes.length

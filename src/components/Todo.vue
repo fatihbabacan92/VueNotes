@@ -28,8 +28,8 @@ export default {
     },
     methods: {
       addTodo() {
-        if (!this.newTodo) {
-          return;
+        if (!this.newTodo.text) {
+          return
         }
         this.newTodo.id = this.todos.length
         this.todos.push(this.newTodo)
