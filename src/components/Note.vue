@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="d-block">
     <div class="m-2">
         <input v-model="newNote.title" type="text" placeholder="Title" class="form-control m-2 w-50" />
         <textarea
@@ -10,8 +10,8 @@
         />
     </div>
           <button @click="addNote" class="btn btn-primary shadow-lg m-2">Save Note</button>
-    <div class="d-inline">
-      <NoteItem v-for="n in notes" v-bind:note="n" v-bind:key="n.id" class="m-2"/>
+    <div class="m-5">
+      <NoteItem @deleteNote="deleteNote(note)" v-for="n in notes" v-bind:note="n" v-bind:key="n.id" />
     </div>
   </div>
 </template>
@@ -28,7 +28,7 @@ export default {
     return {
       notes: [],
       newNote: []
-    };
+    }
   },
   mounted() {
     if (localStorage.getItem("notes")) {
@@ -38,9 +38,10 @@ export default {
   methods: {
     addNote() {
       //Check if not null
-      if (!this.newNote) {
+      if (!this.newNote.title && !this.newNote.text) {
         return;
       }
+      this.newNote.id = this.notes.length
       this.notes.push(this.newNote)
       this.newNote = []
       this.saveNotes()
@@ -49,9 +50,13 @@ export default {
       //Saves to local storage
       const parsed = JSON.stringify(this.notes)
       localStorage.setItem("notes", parsed)
+    },
+    deleteNote(note) {
+      this.notes.splice(this.notes.indexOf(note), 1)
+      this.saveNotes()
     }
   }
-};
+}
 </script>
 
 <style>
