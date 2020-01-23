@@ -2,7 +2,7 @@
   <div class="app">
     <img alt="Vue logo" src="/assets/logo.png" />
     <h1>Welcome to VueNotes</h1>
-    <button type="button" class="btn btn-primary mt-5 shadow-lg">Go to Notes</button>
+    <router-link to="/notes"><button type="button" class="btn btn-primary mt-5 shadow-lg">Go to Notes</button></router-link>
   </div>
 </template>
 

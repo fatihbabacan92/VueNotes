@@ -34,6 +34,7 @@
       </div>
     </nav>
     <router-view class="route-container"/>
+    <p class="lead m-5">Made by Fatih Babacan with ☕ and ❤</p>
   </div>
 </template>
 
