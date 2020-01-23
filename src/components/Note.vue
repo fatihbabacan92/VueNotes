@@ -11,7 +11,7 @@
     </div>
           <button @click="addNote" class="btn btn-primary shadow-lg m-2">Save Note</button>
     <div class="m-5">
-      <NoteItem v-for="n in notes" v-bind:note="n" v-bind:key="n.id" />
+      <NoteItem @deleteNote="deleteNote(note)" v-for="n in notes" v-bind:note="n" v-bind:key="n.id" />
     </div>
   </div>
 </template>
@@ -41,6 +41,7 @@ export default {
       if (!this.newNote) {
         return;
       }
+      this.newNote.id = this.notes.length
       this.notes.push(this.newNote)
       this.newNote = []
       this.saveNotes()
@@ -49,6 +50,10 @@ export default {
       //Saves to local storage
       const parsed = JSON.stringify(this.notes)
       localStorage.setItem("notes", parsed)
+    },
+    deleteNote(note) {
+      this.notes.splice(this.notes.indexOf(note), 1)
+      this.saveNotes()
     }
   }
 };

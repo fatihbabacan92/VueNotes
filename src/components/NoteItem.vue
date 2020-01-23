@@ -5,6 +5,9 @@
       <div class="card-body">
         <p class="card-text">{{note.text}}</p>
       </div>
+      <div class="mx-auto mb-2">
+        <button @click="$emit('deleteNote')" class="btn btn-danger btn-sm shadow-lg">Delete</button>
+      </div>
     </div>
   </div>
 </template>
@@ -12,11 +15,8 @@
 <script>
 export default {
   name: "NoteItem",
-  props: ["note"],
-  methods: {
-    delete() {}
-  }
-};
+  props: ["note"]
+}
 </script>
 
 <style>
