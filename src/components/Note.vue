@@ -28,7 +28,7 @@ export default {
     return {
       notes: [],
       newNote: []
-    };
+    }
   },
   mounted() {
     if (localStorage.getItem("notes")) {
@@ -56,7 +56,7 @@ export default {
       this.saveNotes()
     }
   }
-};
+}
 </script>
 
 <style>
