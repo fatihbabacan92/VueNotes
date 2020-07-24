@@ -34,7 +34,7 @@
       </div>
     </nav>
     <router-view class="route-container"/>
-    <p class="lead m-5">Made by Fatih Babacan with ☕ and ❤</p>
+    <p class="lead m-5 author">Made by Fatih Babacan with ☕ and ❤</p>
   </div>
 </template>
 
@@ -48,5 +48,11 @@
 }
 .route-container {
   margin-top: 5vh;
+}
+.author {
+  position: absolute;
+  left: 50%;
+  bottom: 10px;
+  transform: translate(-50%, 0);
 }
 </style>
