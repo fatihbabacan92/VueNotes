@@ -1,5 +1,8 @@
 # vuenotes
 
+## Deployment URL
+[Heroku](https://vue-notes-fb.herokuapp.com)
+
 ## Project setup
 ```
 npm install
