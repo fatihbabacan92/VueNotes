@@ -5,6 +5,9 @@ This app uses local storage, notes get cleared when moving to a new page.
 
 Apache 2.0 License
 
+## Deployment URL
+[Heroku](https://vue-notes-fb.herokuapp.com)
+
 ## Project setup
 ```
 npm install
