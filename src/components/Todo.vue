@@ -54,9 +54,10 @@ export default {
 <style>
 .todo-card {
   width: 75vw;
-  height: 50vh;;
-  background-color: blueviolet;
+  height: 75vh;
+  overflow: auto;
   color: white;
   border-radius: 35px;
+  padding: 2vw;
 }
 </style>
