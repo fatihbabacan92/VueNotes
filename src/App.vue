@@ -33,14 +33,18 @@
         </ul>
       </div>
     </nav>
-    <router-view class="route-container"/>
-    <p class="lead m-5 author">Made by Fatih Babacan with ☕ and ❤</p>
+    <div class="route-container">
+      <router-view />
+    </div>
+    <div class="author">
+      <p class="lead">Made by Fatih Babacan with ☕ and ❤</p>
+    </div>
   </div>
 </template>
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -48,11 +52,12 @@
 }
 .route-container {
   margin-top: 5vh;
+  width: 100vw;
 }
 .author {
-  position: absolute;
-  left: 50%;
-  bottom: 10px;
-  transform: translate(-50%, 0);
+  margin-top: 2vh;
+  display: flex;
+  justify-content: center;
+  width: 100vw;
 }
 </style>
